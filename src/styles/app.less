@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Light.ttf') format('truetype');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+html,
+body {
+  background: white;
+}
+body,
+button,
+input,
+select,
+textarea {
+  text-transform: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+em,
+b {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  outline: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th,
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#nprogress .bar {
+  background: var(--primary-color) !important;
+}
+#app {
+  color: #0d1b2a;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.area {
+  width: 1320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gradient-text {
+  background: linear-gradient(to bottom, #126ad8, #2444c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media only screen and (max-width: 768px) {
+  .area {
+    width: 100%;
+  }
+}

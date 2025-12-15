@@ -1,0 +1,10 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://girofacilapp.com/#/
+Sitemap: https://girofacilapp.com/#/safe
+Sitemap: https://girofacilapp.com/#/help
+Sitemap: https://girofacilapp.com/#/about
+Sitemap: https://girofacilapp.com/#/remove
+Sitemap: https://girofacilapp.com/#/docs
+
