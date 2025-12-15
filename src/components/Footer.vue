@@ -61,9 +61,11 @@ function scrollToElement(selector: string) {
             <img
               src="@/assets/images/common/logo-white.svg"
               alt="logo"
-              class="w-auto md:h-56 h-100 md:mr-15 mr-50"
+              class="w-auto md:h-56 h-100 md:mr-15 mr-40"
             />
-            <div class="text24 md:w-100 w-full uppercase">{{ APP_NAME }}</div>
+            <div class="md:text-24 text-45 lh-30 md:w-100 w-full uppercase">
+              {{ APP_NAME }}
+            </div>
           </div>
         </div>
         <div
