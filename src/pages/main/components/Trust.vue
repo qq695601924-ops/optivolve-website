@@ -25,6 +25,11 @@ const list = [
     desc:
       "We work side-by-side with merchants, platforms, and financial institutions—building solutions that scale, last, and evolve with your business.",
   },
+  {
+    title: "Execution Certainty inComplex Markets",
+    desc:
+      "From onboarding to go-live, we optimize every step with clear timelines, localized playbooks, and accountable delivery— turning complexity into predictable outcomes.",
+  },
 ];
 const current = ref(0);
 </script>

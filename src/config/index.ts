@@ -12,7 +12,7 @@ export const EMAIL = 'customerservice@future-harvest.com'
 export const ADDRESS = '---'
 
 /** 版权所有 */
-export const COPYRIGHT = '©FUTUREHARVESTHKLIMITED2025.Allrightsreserved.'
+export const COPYRIGHT = '© FUTURE HARVEST HK LIMITED 2025. All rights reserved.'
 
 export interface MenuItem {
   name: string
