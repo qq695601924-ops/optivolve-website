@@ -60,13 +60,13 @@
   }
   // 下局中的三角形
   &[data-bottom-center]::before {
-    bottom: -10px;
+    bottom: -9px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid var(--card-theme-bg);
   }
   &[data-bottom-left]::before {
-    bottom: -10px;
+    bottom: -9px;
     left: 20px;
     right: auto;
     transform: translateX(0);
@@ -75,7 +75,7 @@
     border-top: 10px solid var(--card-theme-bg);
   }
   &[data-bottom-right]::before {
-    bottom: -10px;
+    bottom: -9px;
     right: 20px;
     left: auto;
     transform: translateX(0);
@@ -84,13 +84,13 @@
     border-top: 10px solid var(--card-theme-bg);
   }
   &[data-top-center]::before {
-    top: -10px;
+    top: -9px;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid var(--card-theme-bg);
   }
   &[data-top-right]::before {
-    top: -10px;
+    top: -9px;
     right: 20px;
     left: auto;
     transform: translateX(0);
@@ -99,7 +99,7 @@
     border-bottom: 10px solid var(--card-theme-bg);
   }
   &[data-top-left]::before {
-    top: -10px;
+    top: -9px;
     left: 20px;
     right: auto;
     transform: translateX(0);

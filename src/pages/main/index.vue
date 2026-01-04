@@ -6,6 +6,7 @@ import Services from "./components/Services.vue";
 import Question from "./components/question.vue";
 import Map from "./components/Map.vue";
 import Partners from "./components/Partners.vue";
+import JoinUs from "./components/JoinUs.vue";
 </script>
 
 <template>
@@ -17,5 +18,6 @@ import Partners from "./components/Partners.vue";
     <Question />
     <Map />
     <Partners />
+    <JoinUs />
   </div>
 </template>
