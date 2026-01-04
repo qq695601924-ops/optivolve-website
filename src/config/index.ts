@@ -3,16 +3,16 @@
  */
 
 /** 应用名称 */
-export const APP_NAME = import.meta.env.VITE_APP_NAME || 'future harvest'
+export const APP_NAME = import.meta.env.VITE_APP_NAME || 'vexora'
 
 /** 邮箱 */
-export const EMAIL = 'customerservice@future-harvest.com'
+export const EMAIL = ['sales@vexora.tech', 'support@vexora.tech']
 
 /** 地址 */
 export const ADDRESS = '---'
 
 /** 版权所有 */
-export const COPYRIGHT = '© FUTURE HARVEST HK LIMITED 2025. All rights reserved.'
+export const COPYRIGHT = '© 2025 Vexora Technologies. All rights reserved.'
 
 export interface MenuItem {
   name: string

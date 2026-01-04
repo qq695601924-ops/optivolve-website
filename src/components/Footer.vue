@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { APP_NAME, COPYRIGHT, menuList } from "@/config/index";
+import { COPYRIGHT, EMAIL } from "@/config/index";
 import { useRouter } from "vue-router";
 import { onMounted, ref } from "vue";
-import type { MenuItem } from "@/config/index";
 
 const router = useRouter();
 const isVisible = ref(false);
@@ -24,7 +23,7 @@ watch(router.currentRoute, (newRoute) => {
   }
 });
 
-async function handleNavigation(item: MenuItem) {
+async function handleNavigation(item: { selector: string }) {
   const { selector } = item;
 
   // 如果目标路由与当前路由不同，先进行路由跳转
@@ -54,70 +53,131 @@ function scrollToElement(selector: string) {
 
 <template>
   <transition name="fade-slide" appear>
-    <div class="footer-wrapper relative overflow-hidden text-white bg-#222020">
-      <div class="area md:pt-40 pt-100 md:px-0 px-50">
-        <div class="flex justify-between items-center md:mb-20 mb-50">
-          <div class="flex items-center">
+    <div
+      class="footer-wrapper relative overflow-hidden text-white bg-#211551 text-lighter"
+    >
+      <div class="area pt-50">
+        <div class="flex justify-between">
+          <div>
             <img
               src="@/assets/images/common/logo-white.svg"
               alt="logo"
-              class="w-auto md:h-56 h-100 md:mr-15 mr-40"
+              class="w-auto h-32 mb-20 block"
             />
-            <div class="md:text-24 text-45 lh-30 md:w-100 w-full uppercase">
-              {{ APP_NAME }}
+            <div class="w-300 text-16 lh-24 text-[rgba(255,255,255,0.65)]">
+              We empower businesses to transact globally with seamless onboarding and
+              end-to-end payment integration. Our gateway combines global expertise with a
+              strong local presence to ensure secure, efficient, and reliable
+              transactions.
             </div>
           </div>
-        </div>
-        <div
-          class="flex justify-between items-center mb-40 font-light md:flex-nowrap flex-wrap"
-        >
-          <div
-            class="md:text-16 text-45 md:lh-24 lh-90 cursor-pointer hover:decoration-underline"
-            v-for="item in menuList"
-            :key="item.name"
-            @click="handleNavigation(item)"
-          >
-            {{ item.name }}
+          <div>
+            <div class="text-16 font-semibold mb-22 text-white">Platform</div>
+            <ul class="text-16 text-[rgba(255,255,255,0.65)]">
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                v-if="false"
+              >
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto h-16"
+                />
+                API Documentation
+              </li>
+              <li class="flex items-center gap-4 mb-20 cursor-pointer hover:underline">
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto h-16"
+                />
+                Privacy Policy
+              </li>
+              <li class="flex items-center gap-4 mb-20 cursor-pointer hover:underline">
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto h-16"
+                />
+                Terms of Service
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-16 font-semibold mb-22 text-white">Company</div>
+            <ul class="text-16 text-[rgba(255,255,255,0.65)]">
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="handleNavigation({ selector: 'banner-section' })"
+              >
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto h-16"
+                />
+                Home
+              </li>
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="handleNavigation({ selector: 'why-section' })"
+              >
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto h-16"
+                />
+                Advantages
+              </li>
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="handleNavigation({ selector: 'services-section' })"
+              >
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto h-16"
+                />
+                Services
+              </li>
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="handleNavigation({ selector: 'map-section' })"
+              >
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto h-16"
+                />
+                Global Reach
+              </li>
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="handleNavigation({ selector: 'about-section' })"
+              >
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto h-16"
+                />
+                About
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-16 font-semibold mb-22 text-white">Contact</div>
+            <ul class="text-16 text-[rgba(255,255,255,0.65)]">
+              <li class="flex items-center gap-4 mb-20">{{ EMAIL[0] }}</li>
+              <li class="flex items-center gap-4 mb-20">{{ EMAIL[1] }}</li>
+            </ul>
           </div>
         </div>
+        <img
+          src="@/assets/images/common/footer-logo.svg"
+          alt="footer-bg"
+          class="w-full h-auto block py-50"
+        />
         <div
-          class="md:text-16 text-45 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)] font-bold md:mb-10 mb-50"
-        >
-          Accelerating the Rise of Digital Businesses in Emerging Markets
-        </div>
-        <div
-          class="md:text-16 text-45 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)] md:mb-20 mb-50"
-        >
-          Future Harvest HK Limited is a global investment and operations group built to
-          unlock the next wave of growth across high-potential digital economies. By
-          integrating
-          <span class="font-bold"
-            >technology capability, financial infrastructure, and large-scale
-            distribution</span
-          >, we empower mobile-internet ventures to scale with speed, efficiency, and
-          global ambition.
-        </div>
-        <div
-          class="md:text-16 text-45 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)] font-bold md:mb-10 mb-50"
-        >
-          We go beyond traditional investment.
-        </div>
-        <div
-          class="md:text-16 text-45 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)] md:mb-20 mb-50"
-        >
-          We partner, build, and operate alongside our portfolio teams—delivering product
-          support, market access, user-growth channels, and compliance-ready financial
-          solutions.
-        </div>
-        <div
-          class="md:text-16 text-45 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)] md:mb-50 mb-100"
-        >
-          With active footprints across Hong Kong, Singapore, Southeast Asia, South Asia,
-          Africa, and the Americas, we create a unified ecosystem that helps digital
-          platforms break market barriers and achieve sustainable global expansion.
-        </div>
-        <div
-          class="md:h-55 h-150 flex justify-center items-center md:text-16 text-45 text-[rgba(255,255,255,0.65)]"
+          class="text-16 text-center lh-60 flex items-center justify-center"
           style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
         >
           {{ COPYRIGHT }}

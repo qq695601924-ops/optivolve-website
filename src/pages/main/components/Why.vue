@@ -1,5 +1,5 @@
 <template>
-  <div class="why-section py-100">
+  <div id="why-section" class="why-section py-100" style="scroll-margin-top: 100px">
     <div class="area flex flex-col items-center justify-center gap-50">
       <div class="text-48 font-bold text-center">Why Work With Vexora?</div>
       <div>

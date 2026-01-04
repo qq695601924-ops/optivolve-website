@@ -1,5 +1,5 @@
 <template>
-  <div class="map-section h-800">
+  <div id="map-section" class="map-section h-800" style="scroll-margin-top: 160px">
     <div class="area">
       <div class="card left-113 top-280" data-bottom-center>🇲🇽 Mexico</div>
       <div class="card left-203 top-370" data-bottom-center>🇨🇴 Colombia</div>

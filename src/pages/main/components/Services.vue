@@ -1,5 +1,9 @@
 <template>
-  <div class="services-section h-818 bg-[rgba(147,232,211,0.15)]">
+  <div
+    id="services-section"
+    class="services-section h-818 bg-[rgba(147,232,211,0.15)]"
+    style="scroll-margin-top: 100px"
+  >
     <div class="area flex flex-col items-center justify-center gap-40 h-full">
       <div class="text-48 font-bold text-center w-645">
         Services Requiredfrom Payment Partner

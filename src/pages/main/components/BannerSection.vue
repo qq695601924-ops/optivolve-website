@@ -1,5 +1,8 @@
 <template>
-  <div class="banner-section relative overflow-hidden pt-[var(--nav-bar-height)] h-949">
+  <div
+    id="banner-section"
+    class="banner-section relative overflow-hidden pt-[var(--nav-bar-height)] h-949"
+  >
     <div class="area pt-90">
       <div class="text-88 font-semibold w-678 lh-100 mb-40">Your Gatway To Go Global</div>
       <div class="text-20 lh-30 text-[rgba(33,21,81,0.5)] w-690 mb-40">

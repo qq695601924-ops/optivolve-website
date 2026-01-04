@@ -67,7 +67,8 @@ const [mobileMenuVisible, toggleMobileMenuVisible] = useToggle(false);
           </div>
         </div>
         <div
-          class="w-164 h-44 bg-[var(--primary-color)] border-rd-80 text-15 font-semibold text-#1B152B flex items-center justify-center"
+          v-if="false"
+          class="hover-scale w-164 h-44 bg-[var(--primary-color)] border-rd-80 text-15 font-semibold text-#1B152B flex items-center justify-center"
         >
           Payment API
         </div>
