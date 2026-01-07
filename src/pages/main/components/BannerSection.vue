@@ -37,9 +37,9 @@ function scrollToElement(selector: string) {
       <div
         class="md:text-20 text-35 lh-50 md:lh-30 text-[rgba(33,21,81,0.5)] w-690 mb-40"
       >
-        We empower businesses to transact globally with seamless onboarding and end-to-end
-        payment integration. Our gateway combines global expertise with a strong local
-        presence to ensure secure, efficient, and reliable transactions.
+        We enable businesses to transact globally through seamless onboarding and
+        end-to-end payment integration, combining global expertise with strong local
+        execution.
       </div>
       <div
         class="hover-scale md:w-187 w-350 md:h-69 h-100 border-rd-8 bg-[#47D7AC] md:text-24 text-35 flex items-center justify-center font-semibold cursor-pointer"

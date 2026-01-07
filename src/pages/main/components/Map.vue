@@ -4,7 +4,7 @@
     class="map-section h-800 md:block hidden"
     style="scroll-margin-top: 160px"
   >
-    <div class="area">
+    <div class="area relative h-full">
       <div class="card left-113 top-280" data-bottom-center>🇲🇽 Mexico</div>
       <div class="card left-203 top-370" data-bottom-center>🇨🇴 Colombia</div>
       <div class="card left-315 top-440" data-bottom-center>🇧🇷 Brazil</div>
@@ -12,21 +12,49 @@
       <div class="card left-648 top-483" data-top-center>🇰🇪 Kenya</div>
       <div class="card left-808 top-485" data-top-right>🇮🇩 Indonesia</div>
       <div class="card right-10 top-420" data-top-left>🇵🇭 Philippines</div>
-      <div class="card right-10 top-490" data-bottom-left>🇦🇺 Australia</div>
+      <div class="card card-aus left-1035 bottom-245" data-bottom-left>
+        <span>🇦🇺 Australia</span>
+        <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
+          Trusted Local Acquiring in a High-Compliance Market
+        </div>
+      </div>
       <div class="card right-370 top-250" data-bottom-right>🇵🇰 Pakistan</div>
-      <div class="card right-415 top-350 flex items-center justify-center" data-top-right>
-        <img src="@/assets/images/home/gcc.svg" alt="GCC" class="w-auto h-25 mr-4" /> GCC
+      <div class="card card-gcc right-415 top-350" data-top-right>
+        <div class="flex items-center">
+          <img src="@/assets/images/home/gcc.svg" alt="GCC" class="w-auto h-25 mr-4" />
+          GCC
+        </div>
+        <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
+          Enable GCC Card Payments with Confidence
+        </div>
       </div>
       <div class="card right-142 top-270" data-bottom-left>🇧🇩 Bangladesh</div>
-      <div class="card right-262 top-370" data-top-left>🇮🇳 India</div>
-      <div class="card right-162 top-195" data-bottom-right>🇰🇷 Korea</div>
-      <div class="card right-32 top-215" data-bottom-left>🇯🇵 Japan</div>
-      <div
-        class="card right-72 top-315 flex items-center justify-center"
-        data-bottom-left
-      >
-        <img src="@/assets/images/home/tw.webp" alt="tw" class="w-auto h-25 mr-4" />
-        Taiwan
+      <div class="card card-ind left-832 top-370" data-top-left>
+        <span>🇮🇳 India</span>
+        <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
+          UPI, Cards, and Scale—Handled Locally
+        </div>
+      </div>
+      <div class="card card-korea right-162 bottom-535" data-bottom-right>
+        <span>🇰🇷 Korea</span>
+        <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
+          Advanced Card & Local Payments for a Tech-Driven Market
+        </div>
+      </div>
+      <div class="card card-jp left-1032 bottom-515" data-bottom-left>
+        <span>🇯🇵 Japan</span>
+        <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
+          Precision Payments for a Complex Ecosystem
+        </div>
+      </div>
+      <div class="card card-tw left-989 bottom-425" data-bottom-left>
+        <div class="flex items-center">
+          <img src="@/assets/images/home/tw.webp" alt="tw" class="w-auto h-25 mr-4" />
+          Taiwan
+        </div>
+        <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
+          Fully Localized Acquiring for a Mature Digital Market
+        </div>
       </div>
     </div>
   </div>
@@ -49,9 +77,46 @@
   box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
-
+  .desc {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    user-select: none;
+    transition: all 0s;
+  }
+  &.card-jp,
+  &.card-gcc,
+  &.card-tw,
+  &.card-aus,
+  &.card-ind,
+  &.card-korea {
+    width: 130px;
+    text-align: left;
+  }
+  &.card-aus {
+    width: 160px;
+  }
   &:hover {
     --card-theme-bg: hsla(162, 64%, 56%, 1);
+    &.card-jp,
+    &.card-gcc,
+    &.card-tw,
+    &.card-aus,
+    &.card-ind,
+    &.card-korea {
+      width: 250px;
+      --card-theme-bg: hsla(0, 0%, 100%, 1);
+      height: 120px;
+      z-index: 99;
+      .desc {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.18s ease 0.18s;
+      }
+    }
+    &.card-korea {
+      width: 320px;
+    }
   }
   &::before {
     content: "";

@@ -194,10 +194,33 @@ function gotoBlankPage(url: string) {
             </ul>
           </div>
         </div>
+        <div class="md:flex block justify-between my-40">
+          <div
+            class="md:w-860 w-full md:text-16 text-40 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)]"
+          >
+            PCI DSS Level 1 compliant, licensed and regulated by Bangko Sentral ng
+            Pilipinas (BSP), and registered as a Money Services Business (MSB) with FinCEN
+            in the United States.
+          </div>
+          <div
+            class="md:h-57 h-120 flex items-center md:justify-center justify-start md:gap-20 gap-40 md:mt-0 mt-50"
+          >
+            <img
+              src="@/assets/images/home/partner-1.svg"
+              alt="partner-1"
+              class="w-auto h-100%"
+            />
+            <img
+              src="@/assets/images/home/partner-2.svg"
+              alt="partner-2"
+              class="w-auto h-100%"
+            />
+          </div>
+        </div>
         <img
           src="@/assets/images/common/footer-logo.svg"
           alt="footer-bg"
-          class="w-full h-auto block py-50"
+          class="w-full h-auto block py-40"
         />
         <div
           class="md:text-16 text-40 text-center md:lh-60 lh-120 flex items-center justify-center"
