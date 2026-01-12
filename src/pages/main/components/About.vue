@@ -19,8 +19,8 @@ By combining innovation, reliability, and compliance-first principles, Optivolve
   {
     title: "Our Ambition",
     image: postAbout2,
-    desc: `Our ambition is to become a trusted global transaction enabler for businesses of all sizes. Optivolve Digital aims to bridge markets, remove complexity, and deliver intelligent solutions that support long-term growth.
-As transaction needs evolve, we continuously refine our platform to meet the demands of emerging markets, new business models, and a rapidly changing financial landscape.`,
+    desc: `Our ambition is to become a trusted local transaction partner for businesses across Pakistan. Optivolve Digital is committed to simplifying payment processes, reducing operational complexity, and delivering reliable solutions that support sustainable business growth in the local market.
+As transaction needs evolve, we continuously enhance our platform to align with Pakistan’s regulatory environment, user behaviors, and emerging business models—ensuring our services remain secure, efficient, and future-ready.`,
   },
   {
     title: "Our Purpose",

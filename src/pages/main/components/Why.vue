@@ -34,15 +34,17 @@
             style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
           >
             <div class="md:text-24 text-55 font-semibold">
-              Local Expertise, Global Reach
+              Local Expertise, Built for Pakistan
             </div>
             <div
               class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 md:py-0 py-30"
             >
-              We combine deep local market understanding with a global transaction
-              network. By adapting to regional regulations, payment preferences, and risk
-              environments, Optivolve Digital enables businesses to operate confidently in
-              multiple markets while maintaining a consistent, unified experience.
+              We combine deep understanding of Pakistan’s local market with tailored
+              payment solutions designed for regional regulations, consumer behavior, and
+              risk environments. By focusing on local payment preferences and compliance
+              requirements, Optivolve Digital enables businesses to operate confidently
+              within Pakistan while delivering a smooth, reliable, and consistent
+              transaction experience.
             </div>
             <img
               src="@/assets/images/home/post-why-2.svg"

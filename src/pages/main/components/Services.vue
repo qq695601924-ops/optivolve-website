@@ -21,15 +21,15 @@
               alt="services-1"
               class="w-auto md:h-76 h-220 -ml-20"
             />
-            Global Transaction Processing
+            Local Payment Collection & Disbursement
           </div>
           <div
             class="md:text-16 text-44 md:lh-24 lh-55 text-[rgba(27,21,43,0.5)] md:px-0 px-50 md:pb-0 pb-30"
           >
-            Enable secure and efficient transactions across multiple markets through a
-            unified infrastructure. Optivolve Digital supports cross-border transaction
-            flows with high reliability, helping businesses scale internationally with
-            confidence.
+            We deliver locally optimized payment services that enable businesses to
+            collect and disburse funds in Pakistani Rupee (PKR) with confidence and
+            efficiency. Our solutions are designed to support smooth, reliable
+            transactions tailored to Pakistan’s local payment environment.
           </div>
         </div>
         <div
@@ -42,14 +42,15 @@
               alt="services-1"
               class="w-auto md:h-76 h-220 -ml-20"
             />
-            Local Market Enablement
+            Pay-In & Pay-Out Enablement
           </div>
           <div
             class="md:text-16 text-44 md:lh-24 lh-55 text-[rgba(27,21,43,0.5)] md:px-0 px-50 md:pb-0 pb-30"
           >
-            Adapt to local regulations, currencies, and user preferences with ease. We
-            provide localized transaction capabilities that help businesses enter and
-            operate in new markets while meeting regional compliance requirements.
+            Our platform supports secure Pay-In and Pay-Out capabilities through
+            integrations with local banks, digital wallets, and domestic payment rails.
+            This allows enterprises to manage transactions seamlessly across Pakistan
+            while ensuring speed, reliability, and operational consistency.
           </div>
         </div>
         <div
