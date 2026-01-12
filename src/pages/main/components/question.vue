@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useLanguage } from "@/composables/language";
+
+const { language } = useLanguage();
+
 const questionList = reactive([
   {
     title: "Security-First Architecture",
@@ -79,13 +83,15 @@ const changeActiveIndex = (index: number) => {
               v-if="!item.open"
               src="@/assets/images/home/icon-question-close.svg"
               alt="arrow-down"
-              class="w-auto md:h-32 h-60 absolute right-0 top-1/2 -translate-y-1/2"
+              class="w-auto md:h-32 h-60 absolute top-1/2 -translate-y-1/2"
+              :class="language === 'ur' ? 'left-0' : 'right-0'"
             />
             <img
               v-else
               src="@/assets/images/home/icon-question-open.svg"
               alt="arrow-down"
-              class="w-auto md:h-32 h-60 absolute right-0 top-1/2 -translate-y-1/2"
+              class="w-auto md:h-32 h-60 absolute top-1/2 -translate-y-1/2"
+              :class="language === 'ur' ? 'left-0' : 'right-0'"
             />
           </div>
           <div

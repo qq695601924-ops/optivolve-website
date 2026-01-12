@@ -8,6 +8,7 @@ import postAbout1 from "@/assets/images/home/post-about-1.webp";
 import postAbout2 from "@/assets/images/home/post-about-2.webp";
 import postAbout3 from "@/assets/images/home/post-about-3.webp";
 import ArrowRightActive from "@/assets/images/home/icon-arrow-right-active.webp";
+import { useLanguage } from "@/composables/language";
 
 const step = [
   {
@@ -34,6 +35,10 @@ const currentIndex = ref(0);
 const swiperRef = ref();
 
 const modules = [Navigation];
+const { language } = useLanguage();
+
+// 使用语言作为 key，切换语言时重新初始化 Swiper
+const swiperKey = computed(() => `swiper-${language.value}`);
 
 function onSwiper(swiper: any) {
   swiperRef.value = swiper;
@@ -65,6 +70,7 @@ function changeIndex(direction: number) {
     </div>
     <div class="relative md:mx-30 mx-0">
       <Swiper
+        :key="swiperKey"
         :modules="modules"
         :slides-per-view="1"
         :space-between="60"

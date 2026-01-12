@@ -12,14 +12,14 @@
       </div>
       <div class="grid md:grid-cols-2 grid-cols-1 gap-20 w-full">
         <div
-          class="md:h-216 h-auto bg-#FFFFFF border-rd-20 px-25 py-25 flex flex-col justify-between"
+          class="md:h-230 h-auto bg-#FFFFFF border-rd-20 px-25 py-25 flex flex-col justify-between"
           style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
         >
-          <div class="flex items-center -mt-10 md:text-24 text-50 font-semibold">
+          <div class="flex items-center -mt-10 md:text-24 text-50 font-semibold gap-15">
             <img
               src="@/assets/images/home/icon-services-1.svg"
               alt="services-1"
-              class="w-auto md:h-76 h-220 -ml-20"
+              class="w-auto md:h-76 h-220"
             />
             Local Payment Collection & Disbursement
           </div>
@@ -33,14 +33,14 @@
           </div>
         </div>
         <div
-          class="md:h-216 h-auto bg-#FFFFFF border-rd-20 px-25 py-25 flex flex-col justify-between"
+          class="md:h-230 h-auto bg-#FFFFFF border-rd-20 px-25 py-25 flex flex-col justify-between"
           style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
         >
-          <div class="flex items-center -mt-10 md:text-24 text-50 font-semibold">
+          <div class="flex items-center -mt-10 md:text-24 text-50 font-semibold gap-15">
             <img
               src="@/assets/images/home/icon-services-2.svg"
               alt="services-1"
-              class="w-auto md:h-76 h-220 -ml-20"
+              class="w-auto md:h-76 h-220"
             />
             Pay-In & Pay-Out Enablement
           </div>
@@ -57,11 +57,11 @@
           class="md:h-216 h-auto bg-#FFFFFF border-rd-20 px-25 py-20 flex flex-col justify-between"
           style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
         >
-          <div class="flex items-center -mt-10 md:text-24 text-50 font-semibold">
+          <div class="flex items-center -mt-10 md:text-24 text-50 font-semibold gap-15">
             <img
               src="@/assets/images/home/icon-services-3.svg"
               alt="services-1"
-              class="w-auto md:h-76 h-220 -ml-20"
+              class="w-auto md:h-76 h-220"
             />
             Risk Management & Compliance
           </div>
@@ -77,11 +77,11 @@
           class="md:h-216 h-auto bg-#FFFFFF border-rd-20 px-25 py-25 flex flex-col justify-between"
           style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
         >
-          <div class="flex items-center -mt-10 md:text-24 text-50 font-semibold">
+          <div class="flex items-center -mt-10 md:text-24 text-50 font-semibold gap-15">
             <img
               src="@/assets/images/home/icon-services-4.svg"
               alt="services-1"
-              class="w-auto md:h-76 h-220 -ml-20"
+              class="w-auto md:h-76 h-220"
             />
             Scalable Platform & Integration
           </div>

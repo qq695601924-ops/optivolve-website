@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useLanguage } from "@/composables/language";
+
+const { language } = useLanguage();
+
 async function handleNavigation(selector: string) {
   // 如果目标路由与当前路由不同，先进行路由跳转
   if (selector) {
@@ -49,7 +53,8 @@ function scrollToElement(selector: string) {
         Contact Us
       </div>
       <div
-        class="w-235 h-96 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-18 px-20 absolute right-430 top-450 z-2 md:flex hidden"
+        class="w-235 h-96 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-18 px-20 absolute top-450 z-2 md:flex hidden"
+        :class="language === 'ur' ? 'left-430' : 'right-430'"
       >
         <img
           src="@/assets/images/home/icon-banner-safe.svg"
@@ -59,7 +64,8 @@ function scrollToElement(selector: string) {
         <div class="text-20 lh-24 text-#595959">Secure Payments</div>
       </div>
       <div
-        class="w-294 h-82 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-10 px-20 absolute -right-40 top-455 z-2 md:flex hidden"
+        class="w-294 h-82 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-10 px-20 absolute top-455 z-2 md:flex hidden"
+        :class="language === 'ur' ? 'left-40' : '-right-40'"
       >
         <img
           src="@/assets/images/home/icon-banner-good.svg"
@@ -69,7 +75,8 @@ function scrollToElement(selector: string) {
         <div class="text-20 lh-24 text-#595959">24/7 Expert Support</div>
       </div>
       <div
-        class="w-222 h-145 border-rd-17 bg-[rgba(255,255,255,0.8)] flex-col items-center justify-center gap-20 px-20 absolute right-320 top-650 z-2 md:flex hidden"
+        class="w-222 h-145 border-rd-17 bg-[rgba(255,255,255,0.8)] flex-col items-center justify-center gap-20 px-20 absolute top-650 z-2 md:flex hidden"
+        :class="language === 'ur' ? 'left-320' : 'right-320'"
       >
         <img
           src="@/assets/images/home/icon-banner-time.svg"
@@ -81,12 +88,14 @@ function scrollToElement(selector: string) {
       <img
         src="@/assets/images/home/post-banner.webp"
         alt="banner-img"
-        class="w-auto absolute md:right-15 right-70 md:top-50 top-50 md:h-840 h-1000"
+        class="w-auto absolute md:top-50 top-50 md:h-840 h-1000"
+        :class="language === 'ur' ? 'md:left-0 left-65' : 'md:right-15 right-70'"
       />
       <img
         src="@/assets/images/home/icon-banner-record.svg"
         alt="banner-img"
-        class="w-auto absolute right-370 top-100 h-130 md:block hidden"
+        class="w-auto absolute top-100 h-130 md:block hidden"
+        :class="language === 'ur' ? 'left-370' : 'right-370'"
       />
     </div>
   </div>

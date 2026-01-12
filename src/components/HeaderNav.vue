@@ -3,6 +3,7 @@ import { nextTick } from "vue";
 import { menuList } from "@/config/index";
 import type { MenuItem } from "@/config/index";
 import { useToggle } from "@vueuse/core";
+import { useLanguage } from "@/composables/language";
 
 async function handleNavigation(item: MenuItem) {
   const { selector } = item;
@@ -39,6 +40,25 @@ watch(y, (newY) => {
 });
 
 const [mobileMenuVisible, toggleMobileMenuVisible] = useToggle(false);
+const { language, setLanguage } = useLanguage();
+const [languageDropdownVisible, toggleLanguageDropdown] = useToggle(false);
+const languageDropdownRef = ref<HTMLElement | null>(null);
+
+const languageOptions = [
+  { value: "en", label: "English" },
+  { value: "ur", label: "اردو" },
+] as const;
+
+function handleLanguageSelect(lang: "en" | "ur") {
+  setLanguage(lang);
+  toggleLanguageDropdown(false);
+}
+
+onClickOutside(languageDropdownRef, () => {
+  if (languageDropdownVisible.value) {
+    toggleLanguageDropdown(false);
+  }
+});
 </script>
 
 <template>
@@ -48,8 +68,8 @@ const [mobileMenuVisible, toggleMobileMenuVisible] = useToggle(false);
       class="md:flex fixed hidden left-0 right-0 z-10 h-200 items-center transition-all duration-250 md:h-[var(--nav-bar-height)] z-999 bg-transparent top-0 md:px-0 px-70"
       :class="{ 'bg-white': isFixed }"
     >
-      <div class="area flex items-center justify-center h-100%">
-        <div class="logo flex items-center mr-40">
+      <div class="area flex items-center justify-center h-100% gap-40">
+        <div class="logo flex items-center">
           <img
             src="@/assets/images/common/logo.svg"
             alt="logo"
@@ -60,17 +80,51 @@ const [mobileMenuVisible, toggleMobileMenuVisible] = useToggle(false);
           <div
             v-for="item in menuList"
             :key="item.name"
-            class="h-100% md:flex items-center relative text-14 cursor-pointer hover:text-black text-[var(--primary-color)] transition-all duration-200"
+            class="h-100% md:flex items-center relative text-14 cursor-pointer text-black hover:text-[var(--primary-color)] transition-all duration-200"
             @click="handleNavigation(item)"
           >
             {{ item.name }}
           </div>
         </div>
-        <div
-          v-if="false"
-          class="hover-scale w-164 h-44 bg-[var(--primary-color)] border-rd-80 text-15 font-semibold text-#1B152B flex items-center justify-center"
-        >
-          Payment API
+        <div ref="languageDropdownRef" class="relative">
+          <div
+            class="flex items-center gap-8 cursor-pointer text-14 text-black hover:text-[var(--primary-color)] transition-all duration-200"
+            @click="toggleLanguageDropdown(!languageDropdownVisible)"
+          >
+            <span>{{
+              languageOptions.find((opt) => opt.value === language)?.label
+            }}</span>
+            <svg
+              class="w-12 h-12 transition-transform duration-200"
+              :class="{ 'rotate-180': languageDropdownVisible }"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+          <transition name="fade">
+            <div
+              v-if="languageDropdownVisible"
+              class="absolute rounded-10 overflow-hidden right-0 top-100% mt-8 bg-white border-1 border-#e5e5e5 border-rd-8 shadow-lg min-w-120 z-1000"
+            >
+              <div
+                v-for="option in languageOptions"
+                :key="option.value"
+                class="px-16 py-12 cursor-pointer text-14 hover:bg-#effcf9 transition-colors duration-200"
+                :class="{ 'bg-#effcf9': option.value === language }"
+                @click="handleLanguageSelect(option.value)"
+              >
+                {{ option.label }}
+              </div>
+            </div>
+          </transition>
         </div>
       </div>
     </div>
@@ -119,7 +173,7 @@ const [mobileMenuVisible, toggleMobileMenuVisible] = useToggle(false);
         <transition name="fade">
           <div
             v-if="mobileMenuVisible"
-            class="fixed z-10 bottom-0 left-0 right-0 top-[var(--nav-bar-height)] bg-white px-50 pt-50"
+            class="fixed z-10 bottom-0 left-0 right-0 top-[var(--nav-bar-height)] bg-white px-50 pt-0"
           >
             <div
               v-for="item in menuList"
@@ -129,6 +183,23 @@ const [mobileMenuVisible, toggleMobileMenuVisible] = useToggle(false);
               @click="handleNavigation(item)"
             >
               {{ item.name }}
+            </div>
+            <div class="mt-80 px-40 py-20 bg-#effcf9 rounded-10">
+              <div
+                v-for="(option, index) in languageOptions"
+                :key="option.value"
+                class="text-12 cursor-pointer lh-100 text-50 py-12"
+                :style="{
+                  borderBottom:
+                    index === languageOptions.length - 1 ? 'none' : '1px solid #0000001c',
+                }"
+                :class="{
+                  'text-[var(--primary-color)] font-semibold': option.value === language,
+                }"
+                @click="handleLanguageSelect(option.value)"
+              >
+                {{ option.label }}
+              </div>
             </div>
           </div>
         </transition>
