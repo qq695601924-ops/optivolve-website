@@ -59,7 +59,7 @@ function scrollToElement(selector: string) {
         <div class="text-20 lh-24 text-#595959">Secure Payments</div>
       </div>
       <div
-        class="w-294 h-82 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-10 px-20 absolute -right-40 top-350 z-2 md:flex hidden"
+        class="w-294 h-82 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-10 px-20 absolute -right-40 top-455 z-2 md:flex hidden"
       >
         <img
           src="@/assets/images/home/icon-banner-good.svg"
@@ -81,7 +81,7 @@ function scrollToElement(selector: string) {
       <img
         src="@/assets/images/home/post-banner.webp"
         alt="banner-img"
-        class="w-auto absolute -md:right-110 -right-10 -md:top-50 top-50 md:h-960 h-1000"
+        class="w-auto absolute md:right-15 right-70 md:top-50 top-50 md:h-840 h-1000"
       />
       <img
         src="@/assets/images/home/icon-banner-record.svg"
