@@ -4,6 +4,7 @@ import { menuList } from "@/config/index";
 import type { MenuItem } from "@/config/index";
 import { useToggle } from "@vueuse/core";
 import { useLanguage } from "@/composables/language";
+import { useI18n } from "vue-i18n";
 
 async function handleNavigation(item: MenuItem) {
   const { selector } = item;
@@ -43,6 +44,7 @@ const [mobileMenuVisible, toggleMobileMenuVisible] = useToggle(false);
 const { language, setLanguage } = useLanguage();
 const [languageDropdownVisible, toggleLanguageDropdown] = useToggle(false);
 const languageDropdownRef = ref<HTMLElement | null>(null);
+const { t } = useI18n();
 
 const languageOptions = [
   { value: "en", label: "English" },
@@ -83,7 +85,7 @@ onClickOutside(languageDropdownRef, () => {
             class="h-100% md:flex items-center relative text-14 cursor-pointer text-black hover:text-[var(--primary-color)] transition-all duration-200"
             @click="handleNavigation(item)"
           >
-            {{ item.name }}
+            {{ t(item.name) }}
           </div>
         </div>
         <div ref="languageDropdownRef" class="relative">
@@ -182,7 +184,7 @@ onClickOutside(languageDropdownRef, () => {
               style="border-bottom: 1px solid #e5e5e5"
               @click="handleNavigation(item)"
             >
-              {{ item.name }}
+              {{ t(item.name) }}
             </div>
             <div class="mt-80 px-40 py-20 bg-#effcf9 rounded-10">
               <div

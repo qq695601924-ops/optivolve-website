@@ -1,39 +1,41 @@
 <script setup lang="ts">
 import { useLanguage } from "@/composables/language";
+import { useI18n } from "vue-i18n";
 
 const { language } = useLanguage();
+const { t } = useI18n();
 
 const questionList = reactive([
   {
-    title: "Security-First Architecture",
-    desc: `
+    title: computed(() => t('question.securityFirst.title')),
+    desc: computed(() => `
     <ul class="list-disc list-outside pl-1em">
       <li>
-Optivolve Digital is designed with security as a foundational principle. Our platform applies structured controls and best-practice approaches to help safeguard transaction data throughout its lifecycle.</li>
+${t('question.securityFirst.desc')}</li>
     </ul>
-      `,
+      `),
     open: true,
   },
   {
-    title: "Risk Awareness and Prevention",
-    desc: `
+    title: computed(() => t('question.riskAwareness.title')),
+    desc: computed(() => `
     <ul class="list-disc list-outside pl-1em">
       <li>
-        We focus on reducing operational and transaction-related risks through continuous monitoring, system safeguards, and thoughtful design — helping businesses operate with greater stability and confidence.
+        ${t('question.riskAwareness.desc')}
       </li>
     </ul>
-    `,
+    `),
     open: false,
   },
   {
-    title: "Trust Through Responsible Technology",
-    desc: `
+    title: computed(() => t('question.trustTechnology.title')),
+    desc: computed(() => `
     <ul class="list-disc list-outside pl-1em">
       <li>
-        By prioritizing data protection and transparent processes, Optivolve Digital supports responsible transaction handling and helps businesses build long-term trust with their users.
+        ${t('question.trustTechnology.desc')}
       </li>
     </ul>
-    `,
+    `),
     open: false,
   },
 ]);
@@ -58,11 +60,11 @@ const changeActiveIndex = (index: number) => {
       />
       <div class="md:w-632 w-full">
         <div class="md:text-48 text-88 font-bold md:lh-55 lh-100 md:mb-40 mb-70">
-          Security Built Into Every Transaction
+          {{ t('question.title') }}
         </div>
         <div
           v-for="(item, index) in questionList"
-          :key="item.title"
+          :key="index"
           style="border-top: 1px solid #e5e5e5"
           :style="{
             borderBottom:
@@ -78,7 +80,7 @@ const changeActiveIndex = (index: number) => {
             class="md:text-24 text-50 font-bold md:lh-80 lh-150 relative"
             :class="{ 'text-[var(--primary-color)]': item.open }"
           >
-            {{ item.title }}
+            {{ item.title.value }}
             <img
               v-if="!item.open"
               src="@/assets/images/home/icon-question-close.svg"
@@ -96,7 +98,7 @@ const changeActiveIndex = (index: number) => {
           </div>
           <div
             class="md:text-14 text-44 md:lh-23 lh-55 text-[rgba(27,21,43,0.5)] pb-20"
-            v-html="item.desc"
+            v-html="item.desc.value"
           ></div>
         </div>
       </div>

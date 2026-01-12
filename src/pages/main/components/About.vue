@@ -9,27 +9,27 @@ import postAbout2 from "@/assets/images/home/post-about-2.webp";
 import postAbout3 from "@/assets/images/home/post-about-3.webp";
 import ArrowRightActive from "@/assets/images/home/icon-arrow-right-active.webp";
 import { useLanguage } from "@/composables/language";
+import { useI18n } from "vue-i18n";
 
-const step = [
+const { t } = useI18n();
+
+const step = computed(() => [
   {
-    title: "About Optivolve Digital",
+    title: t('about.aboutOptivolve.title'),
     image: postAbout1,
-    desc: `Optivolve Digital is a technology-driven company focused on enabling seamless, secure, and scalable transaction solutions for businesses worldwide. We build robust infrastructure that simplifies how value moves across markets, helping organizations operate efficiently in an increasingly connected global economy.
-By combining innovation, reliability, and compliance-first principles, Optivolve Digital empowers businesses to grow with confidence.`,
+    desc: t('about.aboutOptivolve.desc'),
   },
   {
-    title: "Our Ambition",
+    title: t('about.ambition.title'),
     image: postAbout2,
-    desc: `Our ambition is to become a trusted local transaction partner for businesses across Pakistan. Optivolve Digital is committed to simplifying payment processes, reducing operational complexity, and delivering reliable solutions that support sustainable business growth in the local market.
-As transaction needs evolve, we continuously enhance our platform to align with Pakistan’s regulatory environment, user behaviors, and emerging business models—ensuring our services remain secure, efficient, and future-ready.`,
+    desc: t('about.ambition.desc'),
   },
   {
-    title: "Our Purpose",
+    title: t('about.purpose.title'),
     image: postAbout3,
-    desc: `Our purpose is to make transactions simpler, safer, and more accessible. Optivolve Digital exists to help businesses move value with clarity and control, while maintaining the highest standards of security and compliance.
-    By building technology that prioritizes trust and transparency, we strive to support sustainable growth for our partners and contribute to a more connected financial ecosystem.`,
+    desc: t('about.purpose.desc'),
   },
-];
+]);
 
 const currentIndex = ref(0);
 const swiperRef = ref();
@@ -66,7 +66,7 @@ function changeIndex(direction: number) {
     style="scroll-margin-top: 100px"
   >
     <div class="md:text-48 text-88 font-bold text-center md:mb-40 mb-70">
-      About {{ APP_NAME }}
+      {{ t('about.title', { name: APP_NAME }) }}
     </div>
     <div class="relative md:mx-30 mx-0">
       <Swiper
@@ -87,8 +87,8 @@ function changeIndex(direction: number) {
         @slideChange="onSlideChange"
       >
         <SwiperSlide
-          v-for="item in [...step, ...step]"
-          :key="item.title"
+          v-for="(item, index) in [...step, ...step]"
+          :key="`${item.title}-${index}`"
           class="md:w-540 w-800 relative rounded-12 transition-all duration-200 pt-30"
         >
           <div

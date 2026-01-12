@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useLanguage } from "@/composables/language";
+import { useI18n } from "vue-i18n";
 
 const { language } = useLanguage();
+const { t } = useI18n();
 
 async function handleNavigation(selector: string) {
   // 如果目标路由与当前路由不同，先进行路由跳转
@@ -36,7 +38,7 @@ function scrollToElement(selector: string) {
   >
     <div class="area md:pt-90 pt-100 md:px-0 px-50">
       <div class="text-88 font-semibold w-678 lh-100 mb-40">
-        Driving Smarter Transactions with Optivolve Digital.
+        {{ t('banner.title') }}
       </div>
       <div
         v-if="false"
@@ -50,7 +52,7 @@ function scrollToElement(selector: string) {
         class="hover-scale md:w-187 w-350 md:h-69 h-100 border-rd-8 bg-[#47D7AC] md:text-24 text-35 flex items-center justify-center font-semibold cursor-pointer"
         @click="handleNavigation('footer-section')"
       >
-        Contact Us
+        {{ t('common.contactUs') }}
       </div>
       <div
         class="w-235 h-96 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-18 px-20 absolute top-450 z-2 md:flex hidden"
@@ -61,7 +63,7 @@ function scrollToElement(selector: string) {
           alt="banner-img"
           class="w-auto h-64"
         />
-        <div class="text-20 lh-24 text-#595959">Secure Payments</div>
+        <div class="text-20 lh-24 text-#595959">{{ t('common.securePayments') }}</div>
       </div>
       <div
         class="w-294 h-82 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-10 px-20 absolute top-455 z-2 md:flex hidden"
@@ -72,7 +74,7 @@ function scrollToElement(selector: string) {
           alt="banner-img"
           class="w-auto h-44"
         />
-        <div class="text-20 lh-24 text-#595959">24/7 Expert Support</div>
+        <div class="text-20 lh-24 text-#595959">{{ t('common.expertSupport') }}</div>
       </div>
       <div
         class="w-222 h-145 border-rd-17 bg-[rgba(255,255,255,0.8)] flex-col items-center justify-center gap-20 px-20 absolute top-650 z-2 md:flex hidden"
@@ -83,7 +85,7 @@ function scrollToElement(selector: string) {
           alt="banner-img"
           class="w-auto h-44"
         />
-        <div class="text-20 lh-24 text-#595959">99.99% Uptime</div>
+        <div class="text-20 lh-24 text-#595959">{{ t('common.uptime') }}</div>
       </div>
       <img
         src="@/assets/images/home/post-banner.webp"

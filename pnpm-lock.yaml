@@ -35,6 +35,9 @@ importers:
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.2)
+      vue-i18n:
+        specifier: '11'
+        version: 11.1.1(vue@3.5.13(typescript@5.8.2))
       vue-router:
         specifier: ^4.5.0
         version: 4.5.0(vue@3.5.13(typescript@5.8.2))
@@ -4647,6 +4650,7 @@ packages:
   vue-i18n@11.1.1:
     resolution: {integrity: sha512-0P6DkKy96R4Wh2sIZJEHw8ivnlD1pnB6Ib/eldoF1SUpQutfKZv6aMqZwICS1gW0rwq24ZSXw7y3jW+PRVYqWA==}
     engines: {node: '>= 16'}
+    deprecated: This version is NOT deprecated. Previous deprecation was a mistake.
     peerDependencies:
       vue: ^3.0.0
 
@@ -5924,21 +5928,18 @@ snapshots:
     dependencies:
       '@intlify/message-compiler': 11.1.1
       '@intlify/shared': 11.1.1
-    optional: true
 
   '@intlify/message-compiler@11.1.1':
     dependencies:
       '@intlify/shared': 11.1.1
       source-map-js: 1.2.1
-    optional: true
 
   '@intlify/message-compiler@12.0.0-alpha.3':
     dependencies:
       '@intlify/shared': 12.0.0-alpha.3
       source-map-js: 1.2.1
 
-  '@intlify/shared@11.1.1':
-    optional: true
+  '@intlify/shared@11.1.1': {}
 
   '@intlify/shared@11.2.8': {}
 
@@ -10140,7 +10141,6 @@ snapshots:
       '@intlify/shared': 11.1.1
       '@vue/devtools-api': 6.6.4
       vue: 3.5.13(typescript@5.8.2)
-    optional: true
 
   vue-router@4.5.0(vue@3.5.13(typescript@5.8.2)):
     dependencies:
