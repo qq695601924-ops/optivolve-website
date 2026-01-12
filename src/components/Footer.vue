@@ -59,6 +59,7 @@ function gotoBlankPage(url: string) {
   <transition name="fade-slide" appear>
     <div
       class="footer-wrapper relative overflow-hidden text-white bg-#211551 text-lighter"
+      id="footer-section"
     >
       <div class="area md:px-0 px-50">
         <div class="md:flex block justify-between md:py-80 py-100">

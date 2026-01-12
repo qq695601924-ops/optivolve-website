@@ -44,7 +44,7 @@ function scrollToElement(selector: string) {
       </div>
       <div
         class="hover-scale md:w-187 w-350 md:h-69 h-100 border-rd-8 bg-[#47D7AC] md:text-24 text-35 flex items-center justify-center font-semibold cursor-pointer"
-        @click="handleNavigation('contact-section')"
+        @click="handleNavigation('footer-section')"
       >
         Contact Us
       </div>
