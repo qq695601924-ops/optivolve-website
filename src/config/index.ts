@@ -3,16 +3,16 @@
  */
 
 /** 应用名称 */
-export const APP_NAME = import.meta.env.VITE_APP_NAME || 'Vexora'
+export const APP_NAME = import.meta.env.VITE_APP_NAME || 'Optivolve Digital'
 
 /** 邮箱 */
-export const EMAIL = ['sales@vexora.com', 'support@vexora.com']
+export const EMAIL = ['partnership@optivolvedigital.com', 'it@optivolvedigital.com', 'customerservices@optivolvedigital.com']
 
 /** 地址 */
 export const ADDRESS = '---'
 
 /** 版权所有 */
-export const COPYRIGHT = '© 2025 Vexora Technologies. All rights reserved.'
+export const COPYRIGHT = '© 2025 Optivolve Digital. All rights reserved.'
 
 export interface MenuItem {
   name: string
@@ -33,10 +33,10 @@ export const menuList: MenuItem[] = [
     name: 'Services',
     selector: 'services-section',
   },
-  {
-    name: 'Global Reach',
-    selector: 'map-section',
-  },
+  // {
+  //   name: 'Global Reach',
+  //   selector: 'map-section',
+  // },
   {
     name: 'About',
     selector: 'about-section',

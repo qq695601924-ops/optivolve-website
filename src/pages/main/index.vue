@@ -16,10 +16,10 @@ import About from "./components/About.vue";
     <Why />
     <Business v-if="false" />
     <Services />
-    <Question v-if="false" />
-    <Map />
+    <Question />
+    <Map v-if="false" />
     <Partners v-if="false" />
     <About />
-    <JoinUs />
+    <JoinUs v-if="false" />
   </div>
 </template>

@@ -32,9 +32,10 @@ function scrollToElement(selector: string) {
   >
     <div class="area md:pt-90 pt-100 md:px-0 px-50">
       <div class="text-88 font-semibold w-678 lh-100 mb-40">
-        Your Gateway To Go Global
+        Driving Smarter Transactions with Optivolve Digital.
       </div>
       <div
+        v-if="false"
         class="md:text-20 text-35 lh-50 md:lh-30 text-[rgba(33,21,81,0.5)] w-690 mb-40"
       >
         We enable businesses to transact globally through seamless onboarding and

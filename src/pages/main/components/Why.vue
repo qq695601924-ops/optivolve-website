@@ -5,9 +5,7 @@
     style="scroll-margin-top: 100px"
   >
     <div class="area flex flex-col items-center justify-center gap-50">
-      <div class="md:text-48 text-88 font-bold text-center">
-        Secure Infrastructure.<br />Trusted Compliance.
-      </div>
+      <div class="md:text-48 text-88 font-bold text-center">Why Optivolve Digital?</div>
       <div class="md:px-0 px-50 mx-auto w-full">
         <div class="md:flex block items-center justify-between">
           <div
@@ -15,13 +13,15 @@
             style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
           >
             <div class="md:text-24 text-55 font-semibold md:w-505 w-full">
-              Built on Direct Local Payment Infrastructure
+              Built for Modern Transactions
             </div>
             <div
               class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 md:py-0 py-30"
             >
-              Direct access to trusted local rails for higher success rate and better
-              conversion
+              Optivolve Digital is designed to support today’s fast-moving, borderless
+              transaction needs. We provide businesses with a reliable and scalable
+              infrastructure that simplifies how value moves across platforms, markets,
+              and currencies — without unnecessary complexity.
             </div>
             <img
               src="@/assets/images/home/post-why-1.svg"
@@ -34,13 +34,15 @@
             style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
           >
             <div class="md:text-24 text-55 font-semibold">
-              Regulated and Certified Secure, Compliant, Reliable
+              Local Expertise, Global Reach
             </div>
             <div
               class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 md:py-0 py-30"
             >
-              We are licensed and regulated in multiple countries and are PCI DSS Level 1
-              certified. All transactions are highly secure and process seamlessly!
+              We combine deep local market understanding with a global transaction
+              network. By adapting to regional regulations, payment preferences, and risk
+              environments, Optivolve Digital enables businesses to operate confidently in
+              multiple markets while maintaining a consistent, unified experience.
             </div>
             <img
               src="@/assets/images/home/post-why-2.svg"
@@ -50,24 +52,21 @@
           </div>
         </div>
         <div
-          v-if="false"
-          class="md:w-1200 w-full md:h-204 h-auto bg-#EFFCF9 border-rd-16 md:px-20 px-50 md:py-20 py-50 md:flex block justify-between items-center"
+          class="mt-40 md:w-1200 w-full md:h-204 h-auto bg-#EFFCF9 border-rd-16 md:px-20 px-50 md:py-20 py-50 md:flex block justify-between items-center"
           style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
         >
           <div class="md:w-670 w-full flex flex-col justify-between">
-            <div class="md:text-24 text-55 font-semibold mb-15">Growth & Expansion</div>
-            <ul
-              class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 list-disc list-outside pl-15 md:py-0 py-30"
+            <div class="md:text-24 text-55 font-semibold mb-15">
+              Security, Compliance, and Control at the Core
+            </div>
+            <div
+              class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 md:py-0 py-30"
             >
-              <li>
-                We continuously onboard new merchants and expand our solution offerings
-                across global markets, including Southeast Asia.
-              </li>
-              <li>
-                Our extensive network, regional expertise, and market knowledge enable our
-                payment partners to scale efficiently and grow alongside us.
-              </li>
-            </ul>
+              Trust is at the heart of everything we do. Optivolve Digital is built with
+              strong security standards, compliance-first architecture, and transparent
+              controls, helping businesses manage transactions efficiently while staying
+              aligned with regulatory and risk requirements.
+            </div>
           </div>
           <img
             src="@/assets/images/home/post-why-3.svg"

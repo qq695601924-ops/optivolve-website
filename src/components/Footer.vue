@@ -60,13 +60,13 @@ function gotoBlankPage(url: string) {
     <div
       class="footer-wrapper relative overflow-hidden text-white bg-#211551 text-lighter"
     >
-      <div class="area md:pt-50 pt-100 md:px-0 px-50">
-        <div class="md:flex block justify-between">
+      <div class="area md:px-0 px-50">
+        <div class="md:flex block justify-between md:py-80 py-100">
           <div class="md:mb-0 mb-70">
             <img
               src="@/assets/images/common/logo-white.svg"
               alt="logo"
-              class="w-auto md:h-32 h-80 mb-20 block"
+              class="w-auto md:h-32 h-120 md:mb-20 mb-60 block"
             />
             <div
               class="md:w-300 w-full md:text-16 text-40 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)]"
@@ -161,6 +161,7 @@ function gotoBlankPage(url: string) {
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                v-if="false"
                 @click="handleNavigation({ selector: 'map-section' })"
               >
                 <img
@@ -200,7 +201,7 @@ function gotoBlankPage(url: string) {
             </ul>
           </div>
         </div>
-        <div class="md:flex block justify-between my-40">
+        <div class="md:flex block justify-between my-40" v-if="false">
           <div
             class="md:w-860 w-full md:text-16 text-40 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)]"
           >
@@ -224,12 +225,13 @@ function gotoBlankPage(url: string) {
           </div>
         </div>
         <img
+          v-if="false"
           src="@/assets/images/common/footer-logo.svg"
           alt="footer-bg"
           class="w-full h-auto block py-40"
         />
         <div
-          class="md:text-16 text-40 text-center md:lh-60 lh-120 flex items-center justify-center"
+          class="md:text-16 text-40 text-center md:lh-70 lh-120 flex items-center justify-center"
           style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
         >
           {{ COPYRIGHT }}

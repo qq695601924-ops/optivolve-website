@@ -11,22 +11,22 @@ import ArrowRightActive from "@/assets/images/home/icon-arrow-right-active.webp"
 
 const step = [
   {
-    title: "About",
+    title: "About Optivolve Digital",
     image: postAbout1,
-    desc:
-      "We are an international payment service provider (PSP) working with local partners worldwide to deliver localized payment solutions to global clients. We specialize in international merchants and focus on Alternative Payment Methods (APMs), including online banking, ATM cards, e-wallets, QR payments, and OTC transactions, with global card acquiring as a key strategic focus.",
+    desc: `Optivolve Digital is a technology-driven company focused on enabling seamless, secure, and scalable transaction solutions for businesses worldwide. We build robust infrastructure that simplifies how value moves across markets, helping organizations operate efficiently in an increasingly connected global economy.
+By combining innovation, reliability, and compliance-first principles, Optivolve Digital empowers businesses to grow with confidence.`,
   },
   {
-    title: "Purpose",
+    title: "Our Ambition",
     image: postAbout2,
-    desc:
-      "To simplify global payments and remove barriers in complex and emerging markets, enabling businesses to accept payments securely and efficiently anywhere in the world.",
+    desc: `Our ambition is to become a trusted global transaction enabler for businesses of all sizes. Optivolve Digital aims to bridge markets, remove complexity, and deliver intelligent solutions that support long-term growth.
+As transaction needs evolve, we continuously refine our platform to meet the demands of emerging markets, new business models, and a rapidly changing financial landscape.`,
   },
   {
-    title: "Ambition",
+    title: "Our Purpose",
     image: postAbout3,
-    desc:
-      "To build a globally connected payment infrastructure that bridges international card networks and trusted local payment systems, powering long-term growth for businesses worldwide.",
+    desc: `Our purpose is to make transactions simpler, safer, and more accessible. Optivolve Digital exists to help businesses move value with clarity and control, while maintaining the highest standards of security and compliance.
+    By building technology that prioritizes trust and transparency, we strive to support sustainable growth for our partners and contribute to a more connected financial ecosystem.`,
   },
 ];
 
@@ -57,18 +57,19 @@ function changeIndex(direction: number) {
 <template>
   <div
     id="about-section"
-    class="about-section py-100 md:h-850 h-1650"
+    class="about-section py-100 md:h-1000 h-1900 md:px-0 px-100"
     style="scroll-margin-top: 100px"
   >
-    <div class="area">
-      <div class="md:text-48 text-88 font-bold text-center md:mb-40 mb-70">
-        About {{ APP_NAME }}
-      </div>
-      <div class="relative md:mx-0 mx-100">
+    <div class="md:text-48 text-88 font-bold text-center md:mb-40 mb-70">
+      About {{ APP_NAME }}
+    </div>
+    <div class="relative md:mx-0 mx-100">
+      <div class="absolute w-120% ml-[-10%] top-20">
         <Swiper
           :modules="modules"
           :slides-per-view="1"
-          :space-between="40"
+          :space-between="60"
+          :centered-slides="true"
           :loop="true"
           :allow-touch-move="true"
           :breakpoints="{
@@ -76,20 +77,22 @@ function changeIndex(direction: number) {
               slidesPerView: 3,
             },
           }"
-          class="about-swiper"
+          class="about-swiper md:h-900 h-auto"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
         >
           <SwiperSlide
             v-for="item in [...step, ...step]"
             :key="item.title"
-            class="md:w-540 w-800 md:h-558 h-900 relative rounded-12 overflow-hidden"
+            class="md:w-540 w-800 relative rounded-12 transition-all duration-200 pt-80"
           >
-            <div class="w-full md:h-200 h-500 relative">
+            <div
+              class="w-full md:h-240 h-500 relative rounded-[12px_12px_0_0] overflow-hidden"
+            >
               <img :src="item.image" alt="about-1" class="w-full h-full object-cover" />
             </div>
             <div
-              class="md:flex hidden w-88 h-88 bg-#FFFFFF rounded-full absolute left-15 top-140 items-center justify-center transition-all duration-200 z-2"
+              class="md:flex hidden w-88 h-88 bg-#FFFFFF rounded-full absolute left-15 top-260 items-center justify-center transition-all duration-200 z-2"
               style="box-shadow: 0px 50px 60px -10px rgba(0, 0, 0, 0.08)"
             >
               <img
@@ -99,12 +102,14 @@ function changeIndex(direction: number) {
               />
             </div>
             <div
-              class="w-full md:h-292 h-600 relative bg-white px-20 py-45 transition-all duration-400 rounded-[0px_0px_12px_12px]"
+              class="w-full relative bg-white px-20 py-45 transition-all duration-400 rounded-[0px_0px_12px_12px]"
             >
               <div class="md:text-24 text-55 text-semibold text-#1B152B md:mb-10 mb-30">
                 {{ item.title }}
               </div>
-              <div class="md:text-14 text-40 text-[rgba(27,21,43,0.5)] md:lh-18 lh-55">
+              <div
+                class="md:text-15 text-40 text-[rgba(27,21,43,0.5)] md:lh-20 lh-55 whitespace-pre-wrap"
+              >
                 {{ item.desc }}
               </div>
             </div>
@@ -131,14 +136,24 @@ function changeIndex(direction: number) {
 
 <style lang="less" scoped>
 .about-section {
-  background: url("@/assets/images/home/bg-about.webp") no-repeat center bottom / 100%
-    auto;
+  background: url("@/assets/images/home/bg-about.webp") no-repeat center bottom / cover;
+  .swiper-slide.swiper-slide-active {
+    transform: scale(1.17);
+  }
 }
 
 :deep(.about-swiper) {
   .swiper-slide {
     width: auto;
     height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    .swiper-slide.swiper-slide-active {
+      transform: scale(1);
+    }
   }
 }
 </style>
