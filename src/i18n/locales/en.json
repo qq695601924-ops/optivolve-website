@@ -42,8 +42,8 @@
       "desc": "We deliver locally optimized payment services that enable businesses to collect and disburse funds in Pakistani Rupee (PKR) with confidence and efficiency. Our solutions are designed to support smooth, reliable transactions tailored to Pakistan's local payment environment."
     },
     "payInOut": {
-      "title": "Pay-In & Pay-Out Enablement",
-      "desc": "Our platform supports secure Pay-In and Pay-Out capabilities through integrations with local banks, digital wallets, and domestic payment rails. This allows enterprises to manage transactions seamlessly across Pakistan while ensuring speed, reliability, and operational consistency."
+      "title": "Collection & Disbursement Enablement",
+      "desc": "Our platform supports secure Collection and Disbursement capabilities through integrations with local banks, digital wallets, and domestic payment rails. This allows enterprises to manage transactions seamlessly across Pakistan while ensuring speed, reliability, and operational consistency."
     },
     "riskManagement": {
       "title": "Risk Management & Compliance",
