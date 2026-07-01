@@ -5,12 +5,15 @@
     "advantages": "فوائد",
     "services": "سروسز",
     "security": "سیکیورٹی",
+    "faq": "FAQ",
     "about": "ہمارے بارے میں",
     "platform": "پلیٹ فارم",
     "company": "کمپنی",
     "contact": "رابطہ",
     "privacyPolicy": "پرائیویسی پالیسی",
-    "termsOfService": "سروس کی شرائط",
+    "termsOfService": "شرائط و ضوابط",
+    "refundPolicy": "ریفنڈ پالیسی",
+    "returnPolicy": "واپسی کی پالیسی",
     "apiDocumentation": "API دستاویزات",
     "securePayments": "محفوظ ادائیگیاں",
     "expertSupport": "24/7 ماہر سپورٹ",
@@ -68,6 +71,9 @@
       "title": "ذمہ دار ٹیکنالوجی کے ذریعے اعتماد",
       "desc": "ڈیٹا کی حفاظت اور شفاف عمل کو ترجیح دینے سے، Optivolve Digital ذمہ دار لین دین کی ہینڈلنگ کو سپورٹ کرتا ہے اور بزنسز کو اپنے صارفین کے ساتھ طویل مدتی اعتماد بنانے میں مدد کرتا ہے۔"
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
   },
   "about": {
     "title": "{name} کے بارے میں",

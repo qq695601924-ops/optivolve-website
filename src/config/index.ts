@@ -16,6 +16,7 @@ export const COPYRIGHT = '© 2025 Optivolve Digital. All rights reserved.'
 
 export interface MenuItem {
   name: string
+  path?: string
   selector?: string
 }
 
@@ -23,22 +24,31 @@ export interface MenuItem {
 export const menuList: MenuItem[] = [
   {
     name: 'common.home',
+    path: '/',
     selector: 'banner-section',
   },
   {
     name: 'common.advantages',
+    path: '/',
     selector: 'why-section',
   },
   {
     name: 'common.services',
+    path: '/',
     selector: 'services-section',
   },
   {
     name: 'common.security',
+    path: '/',
     selector: 'question-section',
   },
   {
     name: 'common.about',
+    path: '/',
     selector: 'about-section',
+  },
+  {
+    name: 'common.faq',
+    path: '/faq',
   },
 ]

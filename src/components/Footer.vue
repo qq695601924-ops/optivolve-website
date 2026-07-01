@@ -25,8 +25,12 @@ watch(router.currentRoute, (newRoute) => {
   }
 });
 
-async function handleNavigation(item: { selector: string }) {
-  const { selector } = item;
+async function handleNavigation(item: { path?: string; selector?: string }) {
+  const { path, selector } = item;
+
+  if (path && router.currentRoute.value.path !== path) {
+    await router.push(path);
+  }
 
   // 如果目标路由与当前路由不同，先进行路由跳转
   if (selector) {
@@ -117,6 +121,28 @@ function gotoBlankPage(url: string) {
                 />
                 {{ t('common.termsOfService') }}
               </li>
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="gotoBlankPage('/RefundPolicy.html')"
+              >
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto md:h-16 h-60"
+                />
+                {{ t('common.refundPolicy') }}
+              </li>
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="gotoBlankPage('/ReturnPolicy.html')"
+              >
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto md:h-16 h-60"
+                />
+                {{ t('common.returnPolicy') }}
+              </li>
             </ul>
           </div>
           <div class="md:mt-0 mt-40">
@@ -128,7 +154,7 @@ function gotoBlankPage(url: string) {
             >
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
-                @click="handleNavigation({ selector: 'banner-section' })"
+                @click="handleNavigation({ path: '/', selector: 'banner-section' })"
               >
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
@@ -139,7 +165,7 @@ function gotoBlankPage(url: string) {
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
-                @click="handleNavigation({ selector: 'why-section' })"
+                @click="handleNavigation({ path: '/', selector: 'why-section' })"
               >
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
@@ -150,7 +176,7 @@ function gotoBlankPage(url: string) {
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
-                @click="handleNavigation({ selector: 'services-section' })"
+                @click="handleNavigation({ path: '/', selector: 'services-section' })"
               >
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
@@ -161,7 +187,7 @@ function gotoBlankPage(url: string) {
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
-                @click="handleNavigation({ selector: 'question-section' })"
+                @click="handleNavigation({ path: '/', selector: 'question-section' })"
               >
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
@@ -172,7 +198,7 @@ function gotoBlankPage(url: string) {
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
-                @click="handleNavigation({ selector: 'about-section' })"
+                @click="handleNavigation({ path: '/', selector: 'about-section' })"
               >
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
@@ -180,6 +206,17 @@ function gotoBlankPage(url: string) {
                   class="w-auto md:h-16 h-60"
                 />
                 {{ t('common.about') }}
+              </li>
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="handleNavigation({ path: '/faq' })"
+              >
+                <img
+                  src="@/assets/images/common/icon-arrow-right.svg"
+                  alt="arrow-right"
+                  class="w-auto md:h-16 h-60"
+                />
+                {{ t('common.faq') }}
               </li>
             </ul>
           </div>

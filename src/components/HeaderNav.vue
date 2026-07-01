@@ -5,10 +5,17 @@ import type { MenuItem } from "@/config/index";
 import { useToggle } from "@vueuse/core";
 import { useLanguage } from "@/composables/language";
 import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 async function handleNavigation(item: MenuItem) {
-  const { selector } = item;
+  const { path, selector } = item;
   toggleMobileMenuVisible(false);
+  if (path && router.currentRoute.value.path !== path) {
+    await router.push(path);
+  }
+
   // 如果目标路由与当前路由不同，先进行路由跳转
   if (selector) {
     await nextTick();

@@ -5,12 +5,15 @@
     "advantages": "Advantages",
     "services": "Services",
     "security": "Security",
+    "faq": "FAQ",
     "about": "About",
     "platform": "Platform",
     "company": "Company",
     "contact": "Contact",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
+    "termsOfService": "Terms and Conditions",
+    "refundPolicy": "Refund Policy",
+    "returnPolicy": "Return Policy",
     "apiDocumentation": "API Documentation",
     "securePayments": "Secure Payments",
     "expertSupport": "24/7 Expert Support",
@@ -68,6 +71,9 @@
       "title": "Trust Through Responsible Technology",
       "desc": "By prioritizing data protection and transparent processes, Optivolve Digital supports responsible transaction handling and helps businesses build long-term trust with their users."
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
   },
   "about": {
     "title": "About {name}",
