@@ -81,27 +81,29 @@ function toggleItem(index: number) {
                 >
               </div>
               <div
-                v-if="openItemIndex === itemIndex"
-                class="pb-45 text-42 text-[rgba(27,21,43,0.58)] lh-56 md:pb-28 md:text-15 md:lh-25"
+                class="faq-answer text-42 text-[rgba(27,21,43,0.58)] lh-56 md:text-15 md:lh-25"
+                :class="{ open: openItemIndex === itemIndex }"
               >
-                <p class="mb-22 md:mb-12">
-                  {{ item.answer }}
-                </p>
-                <ul
-                  v-if="item.bullets?.length"
-                  class="mb-22 list-disc list-outside pl-1em md:mb-12"
-                >
-                  <li
-                    v-for="bullet in item.bullets"
-                    :key="bullet"
-                    class="mb-12 md:mb-4"
+                <div class="faq-answer-inner pb-45 md:pb-28">
+                  <p class="mb-22 md:mb-12">
+                    {{ item.answer }}
+                  </p>
+                  <ul
+                    v-if="item.bullets?.length"
+                    class="mb-22 list-disc list-outside pl-1em md:mb-12"
                   >
-                    {{ bullet }}
-                  </li>
-                </ul>
-                <p v-if="item.note">
-                  {{ item.note }}
-                </p>
+                    <li
+                      v-for="bullet in item.bullets"
+                      :key="bullet"
+                      class="mb-12 md:mb-4"
+                    >
+                      {{ bullet }}
+                    </li>
+                  </ul>
+                  <p v-if="item.note">
+                    {{ item.note }}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -145,6 +147,28 @@ function toggleItem(index: number) {
 
 .faq-item {
   transition: all 200ms ease;
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    grid-template-rows 260ms ease,
+    opacity 220ms ease,
+    transform 260ms ease;
+}
+
+.faq-answer.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq-answer-inner {
+  min-height: 0;
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
