@@ -84,7 +84,7 @@ function toggleItem(index: number) {
                 class="faq-answer text-42 text-[rgba(27,21,43,0.58)] lh-56 md:text-15 md:lh-25"
                 :class="{ open: openItemIndex === itemIndex }"
               >
-                <div class="faq-answer-inner pb-45 md:pb-28">
+                <div class="faq-answer-inner">
                   <p class="mb-22 md:mb-12">
                     {{ item.answer }}
                   </p>
@@ -169,6 +169,16 @@ function toggleItem(index: number) {
 .faq-answer-inner {
   min-height: 0;
   overflow: hidden;
+}
+
+.faq-answer.open .faq-answer-inner {
+  padding-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+  .faq-answer.open .faq-answer-inner {
+    padding-bottom: 28px;
+  }
 }
 
 @media (max-width: 767px) {
